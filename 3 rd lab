@@ -27,3 +27,8 @@ from supplier,parts
 where parts.color='red'
 or parts.color='green';
 
+select distinct supplier.sid 
+from supplier,parts
+where parts.color='red'
+or supplier.city='bangalore';
+
