@@ -32,3 +32,8 @@ from supplier,parts
 where parts.color='red'
 or supplier.city='bangalore';
 
+select distinct c1.sid,c2.sid 
+from catalog c1,catalog c2
+where c1.cost>c2.cost
+and c1.pid=c2.pid;
+
