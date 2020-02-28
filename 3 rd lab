@@ -20,5 +20,10 @@ cost int,
 foreign key(pid) references parts(pid),
 foreign key(sid) references supplier(sid));
 insert into catalog values(10001,20001,10),(10001,20002,10),(10001,20003,30),(10001,20004,10),(10001,20005,10),(10002,20001,10),(10002,20002,20),(10003,20003,30),(10004,20003,40);
-
 select * from catalog;
+
+select distinct supplier.sid 
+from supplier,parts
+where parts.color='red'
+or parts.color='green';
+
